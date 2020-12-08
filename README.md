@@ -4,7 +4,11 @@
 > RAIMBAULT Florentin
 > December 2020
 
-## Install Docker and docker-compose
+## Step 1 - Download and install a non-gui Debian virtual machine 
+
+- Do not forget to use the bridge mode in network settings ! 
+
+## Step 2 - Install Docker and docker-compose
 
 ```
 $ apt install docker.io curl git vim
@@ -13,13 +17,13 @@ $ curl -L "https://github.com/docker/compose/releases/download/<latest_release>/
 
 *<latest_release> : https://github.com/docker/compose/releases/*
 
-## Get the docker compose file
+## Step 3 - Get the docker compose file
 
 ```
 $ git clone https://github.com/l-roland/m3108-supervision.git
 ```
 
-## Change IP in prometheus/prometheus.yml file
+## Step 4 - Change IP in prometheus/prometheus.yml file
 
 ```
 $ vim m3108-supervision/prometheus/prometheus.yml
@@ -27,21 +31,21 @@ $ vim m3108-supervision/prometheus/prometheus.yml
 -> targets: ['<ip_host>:19999'] # put your ip address in <ip_host>
 ```
 
-## Execute the docker compose
+## Step 5 - Execute the docker compose
 
 ```
 $ cd m3108-supervision/
-$ docker-compose up
+$ docker-compose up or docker-compose up -d to run in background
 ```
 
-## Services
+## Step 6 - Services
 
 - netdata : <ip_host>:19999
 - metrics : <ip_host>:19999/api/v1/allmetrics?format=prometheus
 - prometheus : <ip_host>:9090
 - grafana : <ip_host>:3000
 
-## Scrape data
+## Step 7 - Scrape data
 
 - You can find here all parameters and metrics (=datas from netdata) you want : <ip_host>:19999/api/v1/allmetrics?format=prometheus
 
@@ -51,7 +55,7 @@ Parameter example : ```netdata_system_cpu_percentage_average{chart="system.cpu",
 
 ![](https://i.imgur.com/bsBU0d4.png)
 
-## Add prometheus service in grafana
+## Step 8 - Add prometheus service in grafana
 
 - Connect to grafana
 
@@ -61,7 +65,7 @@ Parameter example : ```netdata_system_cpu_percentage_average{chart="system.cpu",
 
 ![](https://i.imgur.com/MSlxMPr.png)
 
-## Create a graph with grafana
+## Step 9 - Create a graph with grafana
 
 - Then create a dashboard and insert the parameter desired in Metrics
 
