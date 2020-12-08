@@ -36,7 +36,7 @@ services:
   command:
    - '--config.file=/etc/prometheus/prometheus.yml'
   volumes:
-   - /home/test/docker/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+   - <run pwd command and paste the result here>/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
   ports:
    - 9090:9090
 
