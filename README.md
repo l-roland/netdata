@@ -1,4 +1,15 @@
-# m3108-supervision
+# Netdata installation on a Linux machine and data visualization with Grafana
+
+> ROLAND Louis
+> RAIMBAULT Florentin
+> December 2020
+
+## Install Docker and docker-compose
+
+```
+$ apt install docker.io curl git
+$ curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+```
 
 ## Get the docker compose file
 
@@ -35,7 +46,7 @@ Parameter example : netdata_system_cpu_percentage_average{chart="system.cpu",fam
 ## Add prometheus service in grafana
 
 - Connect to grafana
-user=admin and password=grafana
+```user=admin``` and ```password=grafana```
 
 - Create a prometheus datasource
 ![](https://i.imgur.com/MSlxMPr.png)
@@ -50,4 +61,3 @@ user=admin and password=grafana
 
 - You can now watch you CPU usage in grafana !
 ![](https://i.imgur.com/UwN5vet.png)
-![](https://i.imgur.com/jCAV2Qh.png)
