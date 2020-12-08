@@ -1,0 +1,21 @@
+global:
+  scrape_interval:     5s
+  evaluation_interval: 5s
+
+  external_labels:
+      monitor: 'codelab-monitor'
+
+rule_files:
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['0.0.0.0:9090']
+
+  - job_name: 'netdata-scrape'
+    metrics_path: '/api/v1/allmetrics'
+    params: 
+      format: [prometheus]
+    honor_labels: true
+    static_configs:
+      - targets: ['192.168.0.77:19999']
