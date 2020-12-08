@@ -87,6 +87,6 @@ Parameter example : ```netdata_system_cpu_percentage_average{chart="system.cpu",
 
 ![](https://i.imgur.com/UwN5vet.png)
 
--And also your avaible disk space and RAM : 
+- And also your avaible disk space and RAM : 
 
 ![](https://imgur.com/8sDC0V8.png)
