@@ -24,7 +24,14 @@ $ curl -L "https://github.com/docker/compose/releases/download/<latest_release>/
 $ git clone https://github.com/l-roland/m3108-supervision.git
 ```
 
-## Step 4 - Change IP in prometheus/prometheus.yml file
+## Step 4 - Change power directory in docker-compose.yml and IP in prometheus/prometheus.yml file
+
+```
+$ pwd
+$ vim m3108-supervision/docker-compose.yml
+
+- <run pwd command and paste the result here>/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+```
 
 ```
 $ vim m3108-supervision/prometheus/prometheus.yml
