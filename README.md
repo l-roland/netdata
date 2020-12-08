@@ -7,6 +7,7 @@
 ## Step 1 - Download and install a non-gui Debian virtual machine 
 
 - Do not forget to use the bridge mode in network settings ! 
+- You need to be root to run the services
 
 ## Step 2 - Install Docker and docker-compose
 
