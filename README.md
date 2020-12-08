@@ -7,7 +7,7 @@
 ## Install Docker and docker-compose
 
 ```
-$ apt install docker.io curl git
+$ apt install docker.io curl git vim
 $ curl -L "https://github.com/docker/compose/releases/download/<latest_release>/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
 
