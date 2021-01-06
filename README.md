@@ -13,15 +13,15 @@
 
 ```
 $ apt install docker.io curl git vim
-$ curl -L "https://github.com/docker/compose/releases/download/<latest_release>/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-```
-
-*<latest_release> : https://github.com/docker/compose/releases/*
+$ curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose```
+latest release of docker compose: https://github.com/docker/compose/releases/*
+$ chmod +x /usr/local/bin/docker-compose
 
 ## Step 3 - Get the docker compose file
 
 ```
 $ git clone https://github.com/l-roland/m3108-supervision.git
+$ cd m3108-supervision
 ```
 
 ## Step 4 - Change power directory in docker-compose.yml and IP in prometheus/prometheus.yml file
@@ -30,13 +30,13 @@ $ git clone https://github.com/l-roland/m3108-supervision.git
 $ pwd
 $ vim m3108-supervision/docker-compose.yml
 
-- <run pwd command and paste the result here>/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+- pwd_result/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
 ```
 
 ```
 $ vim m3108-supervision/prometheus/prometheus.yml
 
--> targets: ['<ip_host>:19999'] # put your ip address in <ip_host>
+-> targets: ['ip_host:19999'] # put your ip address in <ip_host>
 ```
 
 ## Step 5 - Execute the docker compose
@@ -48,10 +48,10 @@ $ docker-compose up or docker-compose up -d to run in background
 
 ## Step 6 - Services
 
-- netdata : <ip_host>:19999
-- metrics : <ip_host>:19999/api/v1/allmetrics?format=prometheus
-- prometheus : <ip_host>:9090
-- grafana : <ip_host>:3000
+- netdata : ip_host:19999
+- metrics : ip_host:19999/api/v1/allmetrics?format=prometheus
+- prometheus : ip_host:9090
+- grafana : ip_host:3000
 
 ## Step 7 - Scrape data
 
