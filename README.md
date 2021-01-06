@@ -2,7 +2,7 @@
 
 > ROLAND Louis
 > RAIMBAULT Florentin
-> December 2020
+> January 2021
 
 ## Step 1 - Download and install a non-gui Debian virtual machine 
 
@@ -16,6 +16,7 @@ $ apt install docker.io curl git vim
 $ curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose```
 latest release of docker compose: https://github.com/docker/compose/releases/*
 $ chmod +x /usr/local/bin/docker-compose
+```
 
 ## Step 3 - Get the docker compose file
 
