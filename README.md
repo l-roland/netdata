@@ -14,11 +14,11 @@
 ```
 $ apt install docker.io curl git vim
 $ curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose```
-latest release of docker compose: https://github.com/docker/compose/releases/*
 $ chmod +x /usr/local/bin/docker-compose
 ```
+*latest release of docker compose: https://github.com/docker/compose/releases/*
 
-## Step 3 - Get the docker compose file
+## Step 3 - Get the docker compose file and go to the folder downloaded
 
 ```
 $ git clone https://github.com/l-roland/m3108-supervision.git
@@ -30,14 +30,16 @@ $ cd m3108-supervision
 ```
 $ pwd
 $ vim m3108-supervision/docker-compose.yml
-
-- pwd_result/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+...
+# put the result of the pwd command instead of pwd_result
+pwd_result/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
 ```
 
 ```
 $ vim m3108-supervision/prometheus/prometheus.yml
-
--> targets: ['ip_host:19999'] # put your ip address in <ip_host>
+...
+# put your ip address instead of ip_host
+targets: ['ip_host:19999'] 
 ```
 
 ## Step 5 - Execute the docker compose
