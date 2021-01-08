@@ -29,7 +29,7 @@ $ cd m3108-supervision
 
 ```
 $ pwd
-$ vim m3108-supervision/docker-compose.yml
+$ vim docker-compose.yml
 ...
 # put the result of the pwd command instead of pwd_result
 pwd_result/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
