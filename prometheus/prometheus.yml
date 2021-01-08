@@ -18,4 +18,4 @@ scrape_configs:
       format: [prometheus]
     honor_labels: true
     static_configs:
-      - targets: ['<ip_host>:19999'] # put your ip address in <ip_host>
+      - targets: ['ip_host:19999'] # put your ip address instead of ip_host
