@@ -4,6 +4,8 @@
 > RAIMBAULT Florentin
 > January 2021
 
+**Please follow TO THE LETTER the Readme to install and use netdata with grafana !**
+
 ## Step 1 - Download and install a non-gui Debian virtual machine 
 
 - Do not forget to use the bridge mode in network settings ! 
